@@ -1,0 +1,139 @@
+@import "../param";
+
+.train-req {
+  margin-bottom: 20rem;
+
+  &__title {
+    margin-bottom: 5rem;
+    font-weight: 600;
+    font-size: 4.4rem;
+    line-height: 6.6rem;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 68.7rem;
+    min-height: 27.9rem;
+    height: auto;
+    border-radius: 3rem;
+    background-color: #fff;
+
+    &:nth-child(n + 3) {
+      margin-top: 5rem;
+    }
+  }
+
+  &__img-box {
+    flex: none;
+    align-self: flex-end;
+    width: 32rem;
+    height: 27.9rem;
+    margin-right: 2rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: bottom;
+    }
+  }
+
+  &__text {
+    width: 31rem;
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 4.1rem;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 11.7rem;
+    height: 5.5rem;
+    padding-left: 1rem;
+    border-radius: 10rem 0 5rem 0;
+    background-color: $blue;
+
+    > svg {
+      width: 0.9rem;
+      height: 1.6rem;
+
+      path {
+        fill: white;
+        stroke: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .train-req {
+    margin-bottom: 32rem;
+
+    &__title {
+      margin-bottom: 14rem;
+      font-size: 6rem;
+      line-height: 9rem;
+    }
+
+    &__cards {
+    }
+
+    &__item {
+      flex-direction: column;
+      align-items: normal;
+      justify-content: space-between;
+      width: 100%;
+      min-height: 98rem;
+      border-radius: 6rem;
+
+      &:nth-child(n + 2) {
+        margin-top: 6rem;
+      }
+    }
+
+    &__img-box {
+      order: 2;
+      align-self: normal;
+      width: 90%;
+      height: 60rem;
+      margin-right: 2rem;
+
+      > img {
+        object-position: bottom;
+      }
+    }
+
+    &__text {
+      order: 1;
+      width: 100%;
+      padding: 8rem 6rem 1rem 8rem;
+      font-size: 6.4rem;
+      line-height: 8.1rem;
+    }
+
+    &__btn {
+      width: 23.4rem;
+      height: 11rem;
+      padding-left: 2rem;
+      border-radius: 20rem 0 10rem 0;
+
+      > svg {
+        width: 1.8rem;
+        height: 3.2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,340 @@
+@import "../param";
+
+.offers {
+  margin-bottom: 20rem;
+
+  &__title-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6rem;
+  }
+
+  &__title {
+    @include title-font;
+  }
+
+  &__navigation-block {}
+
+  &__slider {
+  }
+
+  &__wrapper {
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    min-height: 50rem;
+    padding: 1.2rem 1.2rem 1.5rem 1.2rem;
+    border-radius: 4rem;
+    background-color: #fff;
+  }
+
+  &__item-info-block {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 2.7rem 2rem 2rem 2rem;
+    margin-bottom: 1rem;
+    border-radius: 3rem;
+    background-color: #E9EBF2;
+  }
+
+  &__item-title-block {
+    flex: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.7rem;
+  }
+
+  &__item-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7.8rem;
+    height: 7.8rem;
+    margin-right: 1.8rem;
+    border-radius: 100%;
+    background-color: $red;
+    font-weight: 600;
+    font-size: 2.6rem;
+    line-height: 3.3rem;
+    color: rgba(255, 255, 255, 0.85);
+
+    > span {
+      position: relative;
+
+      &:before {
+        content: '#';
+        position: absolute;
+        left: -1rem;
+        top: 0.3rem;
+        font-size: 1.3rem;
+        line-height: 1.65rem;
+      }
+    }
+  }
+
+  &__item-title {
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 3.8rem;
+
+    &:before {
+      content: 'Пакет услуг';
+      display: block;
+      font-weight: normal;
+      font-size: 1.5rem;
+      line-height: 1.9rem;
+      color: $gray;
+    }
+  }
+
+  &__item-text-block {
+    flex: auto;
+    padding: 4rem 1.6rem;
+    border-radius: 2.3rem;
+    background-color: #fff;
+  }
+
+  &__item-text-block-name {
+    margin-bottom: 1.7rem;
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 2.15rem;
+  }
+
+  &__list {
+    margin-left: 1.8rem;
+  }
+
+  &__list-item {
+    font-weight: 300;
+    list-style-type: disc;
+    font-size: 1.6rem;
+    line-height: 2rem;
+
+    &:nth-child(n + 2) {
+      margin-top: 1rem;
+    }
+  }
+
+  &__item-price-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.2rem 1rem 2.8rem;
+    border-radius: 2.3rem 0 4rem 2.3rem;
+    background-color: #E9EBF2;
+  }
+
+  &__price-box {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__price {
+    display: flex;
+    align-items: flex-start;
+    font-weight: bold;
+
+    &:after {
+      content: '₽';
+    }
+
+    &--current {
+      font-size: 2.7rem;
+      line-height: 3.4rem;
+      margin-right: 0.5rem;
+
+      &:after {
+        margin-left: 0.35rem;
+        font-size: 1.4rem;
+        line-height: 1.78rem;
+      }
+    }
+
+    &--old {
+      font-size: 1.5rem;
+      line-height: 1.9rem;
+      color: $gray-light;
+
+      &:after {
+        font-size: 0.9rem;
+        line-height: 1.14rem;
+      }
+    }
+  }
+
+  &__price-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15.3rem;
+    height: 5.4rem;
+    border-radius: 4rem 0;
+    background-color: $blue;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    color: white;
+    text-transform: uppercase;
+
+    > svg {
+      width: 1rem;
+      height: 1.6rem;
+      margin-left: 0.9rem;
+
+      path {
+        fill: white;
+        stroke: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .offers {
+    margin-bottom: 32rem;
+
+    &__title-content {
+      flex-direction: column;
+      justify-content: normal;
+      align-items: normal;
+      margin-bottom: 10rem;
+    }
+
+    &__title {
+      margin-bottom: 6rem;
+      @include title-font;
+    }
+
+    &__navigation-block {
+    }
+
+    &__slider {
+      margin-right: -4rem;
+    }
+
+    &__wrapper {
+    }
+
+    &__item {
+      min-height: 95rem;
+      padding: 2rem;
+      border-radius: 6rem;
+    }
+
+    &__item-info-block {
+      padding-top: 5.4rem;
+      border-radius: 6rem;
+    }
+
+    &__item-title-block {
+      margin-bottom: 5.4rem;
+    }
+
+    &__item-number {
+      width: 15.6rem;
+      height: 15.6rem;
+      margin-right: 3.6rem;
+      font-size: 5.2rem;
+      line-height: 6.6rem;
+
+      > span {
+        &:before {
+          left: -2rem;
+          top: 0.6rem;
+          font-size: 2.6rem;
+          line-height: 3.3rem;
+        }
+      }
+    }
+
+    &__item-title {
+      font-size: 5rem;
+      line-height: 8.4rem;
+
+      &:before {
+        font-weight: 300;
+        font-size: 3rem;
+        line-height: 3.8rem;
+      }
+    }
+
+    &__item-text-block {
+      padding: 4rem 2.5rem 8rem 2.5rem;
+      border-radius: 4.6rem;
+    }
+
+    &__item-text-block-name {
+      margin-bottom: 3rem;
+      font-size: 3.4rem;
+      line-height: 4.3rem;
+    }
+
+    &__list {
+      margin-left: 3.6rem;
+    }
+
+    &__list-item {
+      font-size: 3.2rem;
+      line-height: 4rem;
+
+      &:nth-child(n + 2) {
+        margin-top: 2rem;
+      }
+    }
+
+    &__item-price-block {
+      padding: 2rem 2rem 2rem 6rem;
+      border-radius: 4.6rem 0 8rem 4.6rem;
+    }
+
+    &__price-box {
+      flex-direction: column;
+      align-items: normal;
+    }
+
+    &__price {
+      &--current {
+        font-size: 5.4rem;
+        line-height: 6.8rem;
+        margin-right: 0;
+
+        &:after {
+          margin-left: 0.7rem;
+          font-size: 2.8rem;
+          line-height: 3.55rem;
+        }
+      }
+
+      &--old {
+        font-size: 3rem;
+        line-height: 3.8rem;
+
+        &:after {
+          font-size: 1.8rem;
+          line-height: 2.3rem;
+        }
+      }
+    }
+
+    &__price-btn {
+      width: 30.6rem;
+      height: 10.8rem;
+      border-radius: 8rem 0;
+      font-size: 3rem;
+      line-height: 3.8rem;
+
+      > svg {
+        width: 2rem;
+        height: 3.2rem;
+        margin-left: 1.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,243 @@
+@import "../param";
+
+.documents {
+  margin-bottom: 20rem;
+
+  &__title {
+    margin-bottom: 6rem;
+    @include title-font;
+  }
+
+  &__sub-title {
+    margin-bottom: 9rem;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44.6rem;
+    min-height: 34.7rem;
+    height: auto;
+    border-radius: 0 3rem;
+    background-color: #D3D6E1;
+
+    &:nth-child(n + 2) {
+      margin-top: 8rem;
+    }
+
+    &--big {
+      width: 100%;
+      padding: 0 12rem 0 4rem;
+    }
+  }
+
+  &__image-block {
+    flex: none;
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+  }
+
+  &__img-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__img-box {
+    position: relative;
+    left: -2rem;
+    top: -6rem;
+    width: 34rem;
+    height: 34rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__text-block {
+    margin-left: 8rem;
+  }
+
+  &__item-title {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 3.8rem;
+  }
+
+  &__item-text {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+
+  &__item-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17rem;
+    height: 5.5rem;
+    padding-left: 2rem;
+    border-radius: 10rem 0 0 0;
+    background-color: $blue;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    color: white;
+    text-transform: uppercase;
+
+    > svg {
+      width: 1rem;
+      height: 1.6rem;
+      margin-left: 2rem;
+
+      path {
+        fill: white;
+        stroke: white;
+      }
+    }
+  }
+
+  &__cards-title {
+    margin-bottom: 7rem;
+    font-weight: 600;
+    font-size: 4.4rem;
+    line-height: 6.6rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .documents {
+    margin-bottom: 32rem;
+
+    &__title {
+    }
+
+    &__sub-title {
+      margin-bottom: 42rem;
+      font-size: 5rem;
+      line-height: 7.5rem;
+    }
+
+    &__cards {
+      margin-bottom: 0;
+      margin-top: 42rem;
+    }
+
+    &__item {
+      border-radius: 0 12rem;
+
+      &:nth-child(n + 2) {
+        margin-top: 40rem;
+      }
+
+      &--big {
+        display: flex;
+        flex-direction: column;
+        align-items: normal;
+        justify-content: normal;
+        width: 100%;
+        min-height: 109rem;
+        padding: 0 4rem;
+        text-align: center;
+      }
+    }
+
+    &__image-block {
+      width: 60rem;
+      height: 60rem;
+      margin: 0 auto 0 auto;
+    }
+
+    &__img-bg {
+      height: 30rem;
+
+      > img {
+        object-fit: cover;
+        object-position: bottom;
+      }
+    }
+
+    &__img-box {
+      position: relative;
+      left: 0;
+      top: -28rem;
+      width: 60rem;
+      height: 60rem;
+
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &__text-block {
+      margin-left: 0;
+      margin-top: -20rem;
+    }
+
+    &__item-title {
+      margin-bottom: 6rem;
+      font-size: 5rem;
+      line-height: 6.3rem;
+    }
+
+    &__item-text {
+      font-size: 3.6rem;
+      line-height: 5.4rem;
+    }
+
+    &__item-btn {
+      width: 34rem;
+      height: 11rem;
+      padding-left: 4rem;
+      border-radius: 20rem 0 0 0;
+      font-size: 3rem;
+      line-height: 3.8rem;
+
+      > svg {
+        width: 2rem;
+        height: 3.2rem;
+        margin-left: 4rem;
+      }
+    }
+
+    &__cards-title {
+      margin-top: 28.8rem;
+      margin-bottom: 0;
+      font-size: 5rem;
+      line-height: 7.5rem;
+    }
+  }
+}

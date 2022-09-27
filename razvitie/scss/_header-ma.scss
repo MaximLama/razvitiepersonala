@@ -1,0 +1,94 @@
+@import 'param';
+
+.header-ma {
+  background-color: #fff;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.5rem 0;
+  }
+
+  &__account-name-block {
+    display: flex;
+    align-items: center;
+  }
+
+  &__account-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6.1rem;
+    height: 6.1rem;
+    margin-right: 3rem;
+    border-radius: 100%;
+    background-color: $red;
+    overflow: hidden;
+
+    &--default {
+      width: 2.8rem;
+      height: 3.7rem;
+
+      path {
+        stroke: white;
+      }
+    }
+
+    &--img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__account-name {
+    font-size: 1.9rem;
+    line-height: 2.4rem;
+    text-align: right;
+
+    &--hello {
+      font-weight: 500;
+    }
+
+    &--name {
+      font-weight: bold;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .header-ma {
+    position: relative;
+    height: 16.4rem;
+
+    &__container {
+      padding: 3rem 4rem;
+    }
+
+    &__account-name-block {
+    }
+
+    &__account-icon {
+      width: 8.4rem;
+      height: 8.4rem;
+      margin-right: 0;
+
+      &--default {
+        width: 4.2rem;
+        height: 5.6rem;
+      }
+
+      &--img {
+      }
+    }
+
+    &__account-name {
+      &--hello {
+      }
+
+      &--name {
+      }
+    }
+  }
+}

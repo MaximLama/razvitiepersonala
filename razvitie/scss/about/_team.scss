@@ -1,0 +1,126 @@
+@import "../param";
+
+.team {
+  margin-bottom: 20rem;
+
+  &__title {
+    margin-bottom: 6rem;
+    @include title-font;
+  }
+
+  &__cards {
+  }
+
+  &__item {
+    display: flex;
+    width: 100%;
+    min-height: 63.7rem;
+    border: 1rem solid #fff;
+    border-radius: 4rem;
+    background-color: #E9EBF2;
+
+    &:nth-child(n + 2) {
+      margin-top: 4.5rem;
+    }
+  }
+
+  &__img-box {
+    flex: none;
+    align-self: flex-end;
+    width: 47rem;
+    height: 60rem;
+    margin-right: 1.5rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: bottom;
+    }
+  }
+
+  &__text-block {
+    width: 77.5rem;
+    margin-top: 7rem;
+  }
+
+  &__speciality {
+    margin-bottom: 1.6rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: $red;
+  }
+
+  &__item-title {
+    margin-bottom: 3.8rem;
+    font-weight: bold;
+    font-size: 4.4rem;
+    line-height: 5.6rem;
+  }
+
+  &__item-text {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .team {
+    margin-bottom: 32rem;
+
+    &__title {
+      margin-bottom: 10rem;
+    }
+
+    &__cards {
+    }
+
+    &__item {
+      flex-direction: column;
+      align-items: center;
+      min-height: auto;
+      border: 2rem solid #fff;
+      border-radius: 8rem;
+      overflow: hidden;
+
+      &:nth-child(n + 2) {
+        margin-top: 6rem;
+      }
+    }
+
+    &__img-box {
+      order: 2;
+      align-self: center;
+      width: 100%;
+      height: 90rem;
+      padding: 0 3rem;
+      margin-right: 0;
+      margin-bottom: -20rem;
+    }
+
+    &__text-block {
+      order: 1;
+      width: 59rem;
+      margin-top: 6rem;
+      margin-bottom: 3rem;
+    }
+
+    &__speciality {
+      margin-bottom: 6rem;
+      font-size: 3.4rem;
+      line-height: 4.3rem;
+    }
+
+    &__item-title {
+      margin-bottom: 6rem;
+      font-size: 5rem;
+      line-height: 6.3rem;
+    }
+
+    &__item-text {
+      font-size: 3.4rem;
+      line-height: 4.3rem;
+    }
+  }
+}

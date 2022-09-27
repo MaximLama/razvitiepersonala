@@ -1,0 +1,183 @@
+@import "../param";
+
+.courses {
+  margin-bottom: 20rem;
+
+  &--watched {
+    .courses__title-text-block {
+      width: 100%;
+    }
+
+    .courses__image-block {
+      padding: 2rem;
+    }
+  }
+
+  &__title-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10rem;
+  }
+
+  &__title {
+    @include title-font;
+  }
+
+  &__slider {
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+  }
+
+  &__item-title-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+  }
+
+  &__title-text-block {
+    width: 45rem;
+  }
+
+  &__item-name {
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    color: $gray;
+  }
+
+  &__item-title {
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 3.8rem;
+  }
+
+  &__item-number {
+    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7.8rem;
+    height: 7.8rem;
+    border-radius: 100%;
+    background-color: $red;
+
+
+    > span {
+      display: flex;
+      align-items: flex-start;
+      margin-left: -0.5rem;
+      font-weight: 600;
+      font-size: 2.6rem;
+      line-height: 3.3rem;
+      color: rgba(255, 255, 255, 0.85);
+
+      &:before {
+        content: '#';
+        display: block;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+      }
+    }
+  }
+
+  &__image-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30.6rem;
+    padding: 2.5rem;
+    border-radius: 3rem;
+    background-color: white;
+  }
+
+  &__img-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 3rem;
+    overflow: hidden;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .courses {
+    margin-bottom: 32rem;
+
+    &__title-block {
+      flex-direction: column;
+      justify-content: normal;
+      align-items: normal;
+      margin-bottom: 10rem;
+    }
+
+    &__title {
+      margin-bottom: 6rem;
+    }
+
+    &__slider {
+      margin-right: -4rem;
+    }
+
+    &__item {
+    }
+
+    &__item-title-block {
+      margin-bottom: 12rem;
+    }
+
+    &__title-text-block {
+      width: 100%;
+    }
+
+    &__item-name {
+      font-size: 3rem;
+      line-height: 3.8rem;
+    }
+
+    &__item-title {
+      font-size: 6rem;
+      line-height: 7.6rem;
+      word-break: break-word;
+    }
+
+    &__item-number {
+      flex: none;
+      width: 15.6rem;
+      height: 15.6rem;
+
+
+      > span {
+        margin-left: -0.5rem;
+        font-size: 5.2rem;
+        line-height: 6.6rem;
+
+        &:before {
+          font-size: 2.6rem;
+          line-height: 3.2rem;
+        }
+      }
+    }
+
+    &__image-block {
+      height: 57.2rem;
+      padding: 2rem;
+      border-radius: 6rem;
+    }
+
+    &__img-box {
+      border-radius: 6rem;
+    }
+  }
+}

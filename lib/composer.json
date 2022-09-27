@@ -1,0 +1,7 @@
+{
+    "name": "cb37950/lib",
+    "require": {
+        "yoomoney/yookassa-sdk-php": "^2.4",
+        "amocrm/amocrm-api-library": "^0.12.1"
+    }
+}

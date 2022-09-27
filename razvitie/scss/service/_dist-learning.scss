@@ -1,0 +1,130 @@
+@import "../param";
+
+.dist-learning {
+  margin-bottom: 20rem;
+
+  &__content-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7rem 9rem 7rem 7rem;
+    border: 1rem solid white;
+    border-radius: 4rem;
+    background-color: #E9EBF2;
+  }
+
+  &__img-box {
+    flex: none;
+    width: 31.1rem;
+    height: 63.1rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__text-block {
+    width: 83.5rem;
+  }
+
+  &__sub-title {
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: $red;
+  }
+
+  &__title {
+    width: 70rem;
+    margin-bottom: 3.8rem;
+    font-weight: bold;
+    font-size: 4.4rem;
+    line-height: 5.6rem;
+  }
+
+  &__list {
+  }
+
+  &__list-item {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.5rem;
+
+    &:nth-child(n + 2) {
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__sub-list {
+  }
+
+  &__sub-list-item {
+    list-style-type: disc;
+    margin-left: 3.5rem;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 48em) {
+  .dist-learning {
+    margin-bottom: 32rem;
+
+    &__content-block {
+      flex-direction: column;
+      align-items: normal;
+      justify-content: normal;
+      padding: 6rem 6rem 0 6rem;
+      border: 2rem solid white;
+      border-radius: 8rem;
+      overflow: hidden;
+    }
+
+    &__img-box {
+      order: 2;
+      width: 54.6rem;
+      height: 110.6rem;
+      margin: 0 auto -41.2rem auto;
+    }
+
+    &__text-block {
+      order: 1;
+      width: 100%;
+      margin-bottom: 11rem;
+    }
+
+    &__sub-title {
+      margin-bottom: 4rem;
+      font-size: 3.4rem;
+      line-height: 4.3rem;
+    }
+
+    &__title {
+      width: 100%;
+      margin-bottom: 6rem;
+      font-size: 5rem;
+      line-height: 7.3rem;
+    }
+
+    &__list {
+    }
+
+    &__list-item {
+      font-size: 3.4rem;
+      line-height: 4.3rem;
+
+      &:nth-child(n + 2) {
+        margin-top: 5rem;
+      }
+    }
+
+    &__sub-list {
+    }
+
+    &__sub-list-item {
+      margin-left: 5rem;
+    }
+  }
+}

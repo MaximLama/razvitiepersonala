@@ -1,0 +1,73 @@
+@import "set";
+@import "components";
+@import "header";
+@import "footer";
+
+@import "main/main-intro";
+@import "main/prog-study";
+@import "main/offers";
+@import "main/more-center";
+@import "main/advantages";
+@import "main/feedback";
+@import "main/reviews";
+@import "main/partners";
+@import "main/contacts";
+
+@import "about/about-intro";
+@import "about/boss";
+@import "about/about-numbers";
+@import "about/about-content";
+@import "about/team";
+@import "about/partner-stages";
+
+@import "all-reviews/all-reviews";
+@import "all-reviews/review-page";
+
+@import "documents/documents";
+@import "documents/calculate";
+@import "documents/train-req";
+
+@import "service/services";
+@import "service/service-desc";
+@import "service/courses";
+@import "service/dist-learning";
+@import "service/news";
+@import "service/service-article";
+@import "service/course-page";
+
+@import "cart/cart";
+
+@import "login";
+@import "header-ma";
+@import "personal";
+
+body {
+  background-image: url("../img/background.svg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.label-checkbox {
+  user-select: none;
+}
+
+@media (min-width: 48.01em) {
+  .mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 48em) {
+  .desktop {
+    display: none;
+  }
+
+  body {
+    background-image: url("../img/background-mob.svg");
+  }
+}

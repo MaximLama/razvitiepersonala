@@ -1,0 +1,203 @@
+@import "param";
+
+.page-pagination {
+  margin: 4.5rem 0;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__page {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    text-transform: uppercase;
+
+    &--old {
+      color: $gray;
+    }
+
+    &--current {
+      color: $red;
+    }
+  }
+
+  &__arrow {
+    width: 1rem;
+    height: 1.6rem;
+    margin: 0 1.8rem;
+
+    path {
+      fill: $red;
+      stroke: $red;
+    }
+  }
+}
+
+.whatsapp-btn {
+  position: fixed;
+  right: 10rem;
+  bottom: 10rem;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &__bg {
+    position: absolute;
+    z-index: -1;
+    width: 12.5rem;
+    height: 12.5rem;
+    border-radius: 100%;
+    background-color: rgba(83, 196, 64, 0.2);
+
+    animation: pulsation 3s infinite linear;
+  }
+
+  &__circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10.3rem;
+    height: 10.3rem;
+    border-radius: 100%;
+    background-color: #53C440;
+
+    > svg {
+      width: 4.8rem;
+      height: 4.8rem;
+
+      path {
+        fill: white;
+      }
+    }
+  }
+}
+
+@keyframes pulsation {
+  0% {
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+  50% {
+    width: 11rem;
+    height: 11rem;
+  }
+  100% {
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+}
+
+.navigation-block {
+  display: flex;
+  align-items: center;
+
+  &__pagination-block {
+    display: flex;
+    align-items: center;
+    margin-right: 5.8rem;
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    margin: 0 2.5rem;
+
+    .swiper-pagination-bullet-active {
+      background-color: $red;
+    }
+  }
+
+  &__current-slide {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  &__total-slide {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: $gray;
+  }
+
+  &__arrows {
+    display: flex;
+    align-items: center;
+  }
+
+  &__arrow {
+    width: 2.6rem;
+    height: 2.6rem;
+    cursor: pointer;
+
+    path {
+      stroke: $default-color;
+    }
+
+    &:first-child {
+      margin-right: 1.7rem;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .page-pagination {
+    margin: 6rem 0;
+
+    &__container {
+    }
+
+    &__page {
+      max-width: 54rem;
+      margin-bottom: 2rem;
+      font-size: 3rem;
+      line-height: 3.8rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    &__arrow {
+      width: 2rem;
+      height: 3.2rem;
+      margin: 0 3.6rem 2rem 3.6rem;
+    }
+  }
+
+  .navigation-block {
+    justify-content: space-between;
+
+    &__pagination-block {
+      margin-right: 0;
+    }
+
+    &__pagination {
+      margin: 0 5rem;
+    }
+
+    &__current-slide {
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+
+    &__total-slide {
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+
+    &__arrows {}
+
+    &__arrow {
+      width: 5.2rem;
+      height: 5.2rem;
+
+      &:first-child {
+        margin-right: 3.4rem;
+      }
+    }
+  }
+}

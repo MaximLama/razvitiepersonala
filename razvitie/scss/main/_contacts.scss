@@ -1,0 +1,230 @@
+@import "../param";
+
+.contacts {
+  margin-bottom: 20rem;
+
+  &__info-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7rem;
+  }
+
+  &__text-block {
+    width: 82rem;
+  }
+
+  &__title {
+    margin-bottom: 8rem;
+    @include title-font
+  }
+
+  &__address-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &--office {
+      margin-bottom: 7rem;
+    }
+
+    &--mail {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__address-block-name {
+    font-size: 2rem;
+    line-height: 3rem;
+    color: $gray;
+  }
+
+  &__address {
+    width: 58.8rem;
+    font-weight: bold;
+    font-size: 2.3rem;
+    line-height: 2.9rem;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26rem;
+    height: 6rem;
+    border-radius: 3rem 0 0 0;
+    background-color: $blue;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: white;
+
+    > svg {
+      width: 2.6rem;
+      height: 1.6rem;
+      margin-left: 2.3rem;
+
+      path {
+        stroke: white;
+      }
+    }
+  }
+
+  &__data-block {
+    width: 53.5rem;
+  }
+
+  &__data-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 9rem;
+    padding: 0 3.4rem;
+    border-radius: 3rem 0 0 3rem;
+    backdrop-filter: blur(10px);
+    background-color: #fff;
+
+    > svg {
+      width: 3.2rem;
+      height: 3.2rem;
+      margin-right: 16.6rem;
+
+      path {
+        fill: #B9BECD;
+      }
+    }
+
+    &:first-child {
+      border-radius: 0 3rem;
+    }
+
+    &:last-child {
+      border-radius: 3rem 0;
+    }
+
+    &:nth-child(n + 2) {
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__data-value {
+    font-weight: bold;
+    font-size: 2.3rem;
+    line-height: 2.9rem;
+  }
+
+  &__map-block {
+    position: relative;
+
+    > iframe {
+      width: 100%;
+      height: 50.6rem;
+      border: none;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .contacts {
+    margin-bottom: 0;
+
+    &__info-content {
+      flex-direction: column;
+      justify-content: normal;
+      margin-bottom: 10rem;
+    }
+
+    &__text-block {
+      width: 100%;
+      margin-bottom: 8rem;
+    }
+
+    &__title {
+      margin-bottom: 6rem;
+    }
+
+    &__address-block {
+
+      &--office {
+        margin-bottom: 6rem;
+      }
+
+      &--mail {
+        margin-bottom: 10rem;
+      }
+    }
+
+    &__address-block-name {
+      width: 24rem;
+      font-weight: 500;
+      font-size: 3.4rem;
+      line-height: 4.3rem;
+    }
+
+    &__address {
+      width: 44.6rem;
+      font-size: 3.4rem;
+      line-height: 4.3rem;
+    }
+
+    &__btn {
+      width: 52rem;
+      height: 12rem;
+      border-radius: 6rem 0 0 0;
+      font-size: 3.6rem;
+      line-height: 4.6rem;
+
+      > svg {
+        width: 5.2rem;
+        height: 3.2rem;
+        margin-left: 4.6rem;
+      }
+    }
+
+    &__data-block {
+      width: 100%;
+    }
+
+    &__data-item {
+      min-height: 18rem;
+      padding: 0 0 0 6.8rem;
+      border-radius: 6rem 0 0 6rem;
+      backdrop-filter: blur(10px);
+      background-color: #fff;
+
+      > svg {
+        width: 6.4rem;
+        height: 6.4rem;
+        margin-right: 0;
+      }
+
+      &:first-child {
+        border-radius: 0 6rem;
+      }
+
+      &:last-child {
+        border-radius: 6rem 0;
+      }
+
+      &:nth-child(n + 2) {
+        margin-top: 5rem;
+      }
+    }
+
+    &__data-value {
+      flex: auto;
+      font-size: 4.6rem;
+      line-height: 5.8rem;
+      text-align: center;
+    }
+
+    &__map-block {
+      position: relative;
+
+      > iframe {
+        width: calc(100% + 8rem);
+        height: 82.8rem;
+        margin: 0 -4rem;
+      }
+    }
+  }
+}
